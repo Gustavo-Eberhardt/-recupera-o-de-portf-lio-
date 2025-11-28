@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil {
+    width: 120px;
+    border-radius: 50%;
+}
+
+#darkModeBtn {
+    margin-left: auto;
+    padding: 10px 15px;
+    background: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+main {
+    padding: 20px;
+}
+
+.sobre, .projetos {
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0002;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- MODO NOTURNO --- */
+body.dark {
+    background: #111;
+    color: #eee;
+}
+
+body.dark header {
+    background: #000;
+}
+
+body.dark .card {
+    background: #222;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 700px) {
+    .card {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
